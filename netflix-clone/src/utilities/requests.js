@@ -1,4 +1,7 @@
-const api_key = process.env.REACT_APP_API_KEY;
+const api_key = import.meta.env.VITE_TMDB_API_KEY;
+// The API key is stored in an environment variable for security reasons.
+// This allows you to keep sensitive information out of your codebase.
+// Make sure to set the environment variable in your .env file or your hosting platform.
 const requests = {
   fetchTrending: `/trending/all/week?api_key=${api_key}&language=en-US`,
   fetchNetflixOriginals: `/discover/tv?api_key=${api_key}&with_networks=213`,
